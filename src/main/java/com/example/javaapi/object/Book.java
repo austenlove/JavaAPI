@@ -1,4 +1,4 @@
-package com.example.javaapi.ObjectTest;
+package com.example.javaapi.object;
 
 public class Book {
 

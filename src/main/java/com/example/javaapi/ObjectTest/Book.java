@@ -52,9 +52,10 @@ public class Book {
         return price;
     }
 
+
     @Override
     public String toString() {
-        return "BookVO [number=" + this.number
+        return "Book [number=" + this.number
                 + ", title=" + title
                 + ", author=" + author
                 + ", price=" + price
@@ -107,6 +108,24 @@ public class Book {
 
         // 위의 모든 조건 통과 시 true 반환
         return true;
+    }
+
+
+    @Override
+    public int hashCode() {
+        // 곱셈 연산을 누적시켜야 하기 때문에 0이 아닌 값으로 초기화
+        int result = 1;
+
+        // 필드마다 곱해줄 소수값을 선언
+        // 31 사용은 통상적인 관례이며, 소수이기 때문에 연산 시 동일한 hashCode값이 나오지 않을 확율을 증가시킴
+        final int PRIME = 31;
+
+        // 31과 필드값을 이용하여 새로운 hashCode 연산 (필드값이 같은 경우 동일한 hashCode 반환)
+        result = PRIME * result + this.number;
+        result = PRIME * result + this.title.hashCode();
+        result = PRIME * result + this.author.hashCode();
+
+        return result;
     }
 
 }

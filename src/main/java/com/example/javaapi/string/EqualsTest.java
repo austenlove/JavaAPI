@@ -42,8 +42,18 @@ public class EqualsTest {
         /** equals() :
          * 인스턴스 비교가 아닌 문자열값을 비교
          * 동일한 값을 가지는 경우 true, 다른 값을 가지는 경우 false를 반환
-         * 따라서 문자열 인스턴스 생성 방식과 상관 없이 동일한 문자열인지를 비교하기 위해 == 연산 대신
-         * equals() 메소드를 사용해야 한다.
+         *
+         * 따라서 문자열 인스턴스 생성 방식과 상관 없이 동일한 문자열인지를 비교하기 위해서는
+         * == 연산 대신 equals() 메소드를 사용해야 함
+         * */
+        System.out.println("str1.equals(str3) : " + str1.equals(str3));
+        System.out.println("str1.equals(str4) : " + str1.equals(str4));
+
+
+        /** new java.util.Scanner(System.in).nextLine();을 이용해서 문자열을 입력받는 경우
+         * substring으로 잘라 새 문자열을 생성 후 반환하기 때문에
+         * 결과적으로 new String()으로 인스턴스를 생성한 것과 동일하므로
+         * Scanner로 입력받은 문자열을 비교할 때에도 equals()를 사용해야 함
          * */
     }
 }

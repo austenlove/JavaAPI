@@ -39,5 +39,11 @@ public class EqualsTest {
         // str1과 str2는 동일한 인스턴스였지만 수정 후 다른 인스턴스가 됨
         System.out.println("str1 == str2 : " + (str1 == str2) );
 
+        /** equals() :
+         * 인스턴스 비교가 아닌 문자열값을 비교
+         * 동일한 값을 가지는 경우 true, 다른 값을 가지는 경우 false를 반환
+         * 따라서 문자열 인스턴스 생성 방식과 상관 없이 동일한 문자열인지를 비교하기 위해 == 연산 대신
+         * equals() 메소드를 사용해야 한다.
+         * */
     }
 }

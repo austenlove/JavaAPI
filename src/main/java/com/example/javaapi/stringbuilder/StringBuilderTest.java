@@ -43,9 +43,11 @@ public class StringBuilderTest {
         // insert() : 인자로 전달된 값을 문자열로 변환 후 지정한 인덱스 위치에 추가
         System.out.println("insert() : " + sb2.insert(1, "vao"));
         System.out.println("insert() : " + sb2.insert(0, "j"));
+
         // 인덱스 번호가 문자열 길이와 동일하면 append()와 같은 역할
         System.out.println("insert() : " + sb2.insert(sb2.length(), "jdbc"));
         System.out.println("sb2 : " + sb2);
+
 
         // reverse() : 문자열을 역순으로 재배열
         // 원본에 영향을 미침

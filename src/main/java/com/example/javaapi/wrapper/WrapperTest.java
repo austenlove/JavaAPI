@@ -47,5 +47,37 @@ public class WrapperTest {
         System.out.println("integerNum1과 integerNum2 비교 : " + (integerNum1.equals(integerNum2)));
         System.out.println("integerNum1과 integerNum3 비교 : " + (integerNum1.equals(integerNum3)));
         System.out.println("integerNum1과 integerNum2 비교 : " + (integerNum3.equals(integerNum4)));
+
+
+
+        /** parsing : 문자열 -> 기본 자료형 값으로 변환 */
+        byte b = Byte.parseByte("1");
+        short s = Short.parseShort("2");
+        int i = Integer.parseInt("4");
+        long l = Long.parseLong("8");
+        float f = Float.parseFloat("4.0");
+        double d = Double.parseDouble("8.0");
+        boolean bl = Boolean.parseBoolean("true");
+
+        char c = "abc".charAt(0);  // Character는 parsing 기능을 제공하지 않음
+
+
+
+        /** valueOf() : 기본 자료형 값 -> Wrapper 타입으로 변환 */
+        /** toString() : 필드 값 -> 문자열로 변환 */
+        String b2 = Byte.valueOf((byte) 1).toString();
+        String s2 = Short.valueOf((short) 2).toString();
+        String i2 = Integer.valueOf(4).toString();
+        String l2 = Long.valueOf(8L).toString();
+        String f2 = Float.valueOf(4.0f).toString();
+        String d2 = Double.valueOf(8.0).toString();
+        String b1 = Boolean.valueOf(true).toString();
+        String c2 = Character.valueOf('a').toString();
+
+        // String 클래스의 valueOf 사용
+        String str = String.valueOf(10);
+
+        // 문자열 합치기를 통해 String으로 변환 가능
+        String str2 = 123 + "";
     }
 }

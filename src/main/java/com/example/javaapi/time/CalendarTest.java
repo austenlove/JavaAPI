@@ -97,5 +97,33 @@ public class CalendarTest {
         }
         System.out.println("요일 : " + day);
 
+        System.out.println("amPm : " + birthDay.get(Calendar.AM_PM));   // 0은 오전, 1은 오후
+        System.out.println(birthDay.get(Calendar.AM_PM) == Calendar.AM ? "오전" : "오후");
+
+        System.out.println("hourOfDay : " + birthDay.get(Calendar.HOUR_OF_DAY));   // 24시간 체계
+        System.out.println("hour : " + birthDay.get(Calendar.HOUR));   // 12시간 체계
+
+        System.out.println("min : " + birthDay.get(Calendar.MINUTE));
+        System.out.println("second : " + birthDay.get(Calendar.SECOND));
+
+
+        /** Date <-> Calendar 간의 변환 */
+        // Calendar -> Date 변환
+        Calendar calendar3 = Calendar.getInstance();
+        System.out.println("calendar3 : " + calendar3);
+
+        Date date3 = new Date(calendar3.getTimeInMillis());
+        System.out.println("date3 : " + date3);
+
+        // Date -> Calendar 변환
+        Date date4 = new Date();
+        System.out.println("date4 : " + date4);
+
+        Calendar calendar4 = Calendar.getInstance();
+        calendar4.setTime(date);
+
+        System.out.println("calendar4 : " + calendar4);
+
+
     }
 }
